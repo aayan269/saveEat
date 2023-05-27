@@ -1,0 +1,56 @@
+.outlet{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+color: #FFFFFF;
+position: relative;
+}
+.outlet::after{
+    content: "Outlet Id:";
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+position: absolute;
+left: 50px;
+bottom: -7px;
+}
+nav{
+  
+    color: #FFFFFF;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+position: relative;
+/* border: 1px solid red; */
+padding: 19px;
+}
+nav a{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    /* border: 1px solid red; */
+
+}
+a:nth-child(1){
+    width: 15%;
+}
+a:nth-child(2){
+    width: 18%;
+}
+a:nth-child(3){
+    width: 20%;
+}
+a:nth-child(4){
+    width: 19%;
+}
+a:nth-child(5){
+    width: 20%;
+}
+nav a:nth-child(6){
+    width: 8%;
+}
