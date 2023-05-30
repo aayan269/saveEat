@@ -22,6 +22,7 @@ import Ongoing_discount from './page/discount/Ongoing_discount';
 import Category from './page/category/Category';
 import Setting from './page/setting/Setting';
 import BrandSetting from './page/BrandSetting/BrandSetting';
+import Choice from './page/Choice/Choice';
 function App() {
   return (
     <div className="App">
@@ -41,6 +42,7 @@ function App() {
         <Route path="/category" element={<Category/>} />
         <Route  path="/setting" element={<Setting/>} />
         <Route  path="/brand_setting" element={<BrandSetting/>} />
+        <Route  path="/choice" element={<Choice/>} />
 
 
       </Routes>
