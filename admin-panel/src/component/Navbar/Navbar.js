@@ -13,8 +13,8 @@ function Navbar() {
     <Box w={"120px"} display={{ base: "block", md: "none", lg: "none" }}><h2 className='outlet'>RS1019</h2></Box>
     <Box w={"55vw"}  display={{ base: "none", md: "block", lg: "block" }}>
         <nav>
-        <a href='#'>Home</a>
-        <a href='#'>Menu</a>
+        <a href='/'>Home</a>
+        <a href='/'>Menu</a>
         <a href='#'>Reports</a>
         <a href='#'>Settings</a>
         <a href='#'>Help</a>

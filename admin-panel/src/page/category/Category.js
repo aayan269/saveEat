@@ -38,13 +38,13 @@ export default function Category() {
         
         <Thead w={"100%"} border={"4px solid #19ABAD"} bgColor={"#19ABAD"}  display={{base:"none",md:"none",lg:"table"}}>
           <Tr >
-            <Th color={"white"} textAlign={"center"} fontFamily={"Inter"} fontStyle={"normal"} fontWeight={400} fontSize={12}>Menu Category ID</Th>
-            <Th color={"white"} textAlign={"center"} fontFamily={"Inter"} fontStyle={"normal"} fontWeight={400} fontSize={12}>Menu Category Name</Th>
-            <Th color={"white"} textAlign={"center"} fontFamily={"Inter"} fontStyle={"normal"} fontWeight={400} fontSize={12}>Menu Category Order</Th>
+            <Th color={"white"} textAlign={"center"} fontFamily={"Inter"} fontStyle={"normal"} fontWeight={400} fontSize={12}>Category ID</Th>
+            <Th color={"white"} textAlign={"center"} fontFamily={"Inter"} fontStyle={"normal"} fontWeight={400} fontSize={12}>Category Name</Th>
+            <Th color={"white"} textAlign={"center"} fontFamily={"Inter"} fontStyle={"normal"} fontWeight={400} fontSize={12}>Category Order</Th>
             <Th color={"white"} textAlign={"center"} fontFamily={"Inter"} fontStyle={"normal"} fontWeight={400} fontSize={12}>No of Items</Th>
             <Th color={"white"} textAlign={"center"} fontFamily={"Inter"} fontStyle={"normal"} fontWeight={400} fontSize={12}>Created On</Th>
             <Th color={"white"} textAlign={"center"} fontFamily={"Inter"} fontStyle={"normal"} fontWeight={400} fontSize={12}>Created By</Th>
-            <Th color={"white"} textAlign={"center"} fontFamily={"Inter"} fontStyle={"normal"} fontWeight={400} fontSize={12}>Menu Category Window</Th>
+            <Th color={"white"} textAlign={"center"} fontFamily={"Inter"} fontStyle={"normal"} fontWeight={400} fontSize={12}>Category Window</Th>
             </Tr>
         </Thead>
         <Tbody display={{base:"block",md:"block",lg:"none"}}>
