@@ -23,6 +23,10 @@ nav{
 font-style: normal;
 font-weight: 600;
 font-size: 16px;
+/* display: flex;
+width: 100%;
+border: 1px solid;
+justify-content: space-around; */
 position: relative;
 /* border: 1px solid red; */
 padding: 19px;
@@ -34,7 +38,7 @@ nav a{
     text-decoration: none;
     text-align: center;
     /* border: 1px solid red; */
-
+cursor: pointer;
 }
 a:nth-child(1){
     width: 15%;
@@ -46,7 +50,7 @@ a:nth-child(3){
     width: 20%;
 }
 a:nth-child(4){
-    width: 19%;
+    width: 17%;
 }
 a:nth-child(5){
     width: 20%;

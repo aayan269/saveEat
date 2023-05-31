@@ -30,11 +30,9 @@ function App() {
       <Navbar/>
       <br/>     
       <br/>
-      <br/>
-      {/* <Orders/> */}
-      {/* <Orders/> */}
       <Routes>
-        <Route path="/" element={<MenuPage/>} />
+      <Route path="/" element={<Orders/>} />
+        <Route path="/menu" element={<MenuPage/>} />
         <Route path="/editmenu" element={<Editmenu/>} />
         <Route path="/updateItem" element={<UpdateItem/>} />
         <Route path="/addItem" element={<AddItem/>} />
