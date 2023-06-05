@@ -20,14 +20,14 @@ function Navbar() {
   return (
     <Flex  w={"100vw"} h={"62px"} bgColor={"#19ABAD"} justifyContent={"space-between"}>
     <Box w={"120px"} ml={"3vw"}><Image p={"22px"} w={"100%"} h={"100%"} src={vector} alt='saveEat' /></Box>
-    <Box w={"120px"} display={{ base: "block", md: "none", lg: "none" }}><h2 className='outlet'>RS1019</h2></Box>
-    <Box w={"55vw"}  display={{ base: "none", md: "block", lg: "block" }}>
+    <Box w={"120px"} display={{ base: "block", md: "block", lg: "none" }}><h2 className='outlet'>RS1019</h2></Box>
+    <Box w={"55vw"}  display={{ base: "none", md: "none", lg: "block" }}>
         <nav>
-        <a onClick={()=>navigate("/")}>Home</a>
-        <a onClick={()=>navigate("/menu")}>Menu</a>
-        <a >Reports</a>
+        <span onClick={()=>navigate("/")}>Home</span>
+        <span onClick={()=>navigate("/menu")}>Menu</span>
+        <span >Reports</span>
         {/* <a href='#'>Settings</a> */}
-        <a ><Menu pl={9}>
+        <span ><Menu pl={9} >
   {({ isOpen }) => (
     <>
     {isOpen?
@@ -44,15 +44,15 @@ function Navbar() {
       </MenuList>
     </>
   )}
-</Menu></a>
+</Menu></span>
 
-        <a onClick={()=>navigate("/discount")}>Discount</a>
-        <a href='#' ><FaUserAlt  /></a>
+        <span onClick={()=>navigate("/discount")}>Discount</span>
+        <span href='#' ><FaUserAlt  /></span>
         </nav>
         
         </Box>
-    <Box w={"120px"} mr={"1vw"} display={{ base: "none", md: "block", lg: "block" }}><h2 className='outlet'>RS1019</h2></Box>
-    <Box display={{ base: "block", md: "none", lg: "none" }}><HamDrawer/></Box>
+    <Box w={"120px"} mr={"1vw"} display={{ base: "none", md: "none", lg: "block" }}><h2 className='outlet'>RS1019</h2></Box>
+    <Box display={{ base: "block", md: "block", lg: "none" }}><HamDrawer/></Box>
     </Flex>
   )
 }

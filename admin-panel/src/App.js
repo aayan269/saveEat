@@ -23,6 +23,8 @@ import Category from './page/category/Category';
 import Setting from './page/setting/Setting';
 import BrandSetting from './page/BrandSetting/BrandSetting';
 import Choice from './page/Choice/Choice';
+import User from './page/User_setting/UserSetting';
+import Addrole from './page/User_setting/AddRole_modal';
 function App() {
   return (
     <div className="App">
@@ -40,7 +42,9 @@ function App() {
         <Route path="/category" element={<Category/>} />
         <Route  path="/setting" element={<Setting/>} />
         <Route  path="/brand_setting" element={<BrandSetting/>} />
+        <Route  path="/user_setting" element={<User/>} />
         <Route  path="/choice" element={<Choice/>} />
+        <Route  path="/addRole/:text" element={<Addrole/>} />
 
 
       </Routes>
