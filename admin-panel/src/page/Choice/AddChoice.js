@@ -56,7 +56,6 @@ export default function AddChoice() {
 <Select
 key={index}
   options={optionList}
-  placeholder="Select color"
   value={selectedOptions}
   onChange={handleSelect}
 />

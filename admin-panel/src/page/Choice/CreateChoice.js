@@ -43,7 +43,7 @@ export default function CreateChoice() {
               
              <Flex gap={{base:0,md:5,lg:7}} flexDirection={{base:"column",md:"row"}}>
              <FormControl id="Choice" isRequired>
-                <FormLabel >Choice Name</FormLabel>
+                <FormLabel >Choice Options</FormLabel>
                     <TagInput type="text" />          
                     
                 </FormControl>
@@ -52,7 +52,7 @@ export default function CreateChoice() {
              <FormControl id="Food_type" isRequired>
                 <FormLabel>Food Type</FormLabel>
                 <InputGroup>
-                  <Input placeholder='Enter amount' />
+                  <Input placeholder='Veg/Non-veg' />
                  <InputRightElement>
                   <TriangleDownIcon />
                  </InputRightElement>

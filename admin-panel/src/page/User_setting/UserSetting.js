@@ -212,7 +212,7 @@ Delete Item
         <Tbody display={{base:"none",md:"none",lg:"table"}}>
         <Tr>
         <Td id="thd"><form onSubmit={(e)=>{e.preventDefault(); console.log(value)}}> <InputGroup>
-          <Input size={"xs"} value={value} width={"100%"} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Add items"/>
+          <Input size={"xs"} value={value} width={"100%"} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Ex- Admin"/>
           <InputRightElement
             children={
               <SearchIcon
@@ -226,7 +226,7 @@ Delete Item
             }
           />        </InputGroup> </form></Td>
          <Td id="thd"><form onSubmit={(e)=>{e.preventDefault(); console.log(value)}}> <InputGroup>
-          <Input size={"xs"} value={value} width={"100%"} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Add items"/>
+          <Input size={"xs"} value={value} width={"100%"} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Ex- 12/12/2012 8:00"/>
           <InputRightElement
             children={
               <SearchIcon
@@ -240,7 +240,7 @@ Delete Item
             }
           />        </InputGroup> </form></Td>
             <Td id="thd"><form onSubmit={(e)=>{e.preventDefault(); console.log(value)}}> <InputGroup>
-          <Input size={"xs"} value={value} width={"100%"} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Add items"/>
+          <Input size={"xs"} value={value} width={"100%"} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Ex- Richa"/>
           <InputRightElement
             children={
               <SearchIcon

@@ -63,7 +63,7 @@ export default function AddItem() {
       <Flex padding={"15px 15px 0px 15px"} gap={"10px"} flexDirection={{base:"column",md:"row"}}>   
               <FormControl id="taxRate" isRequired>
                 <FormLabel>Tax Rate</FormLabel>
-                <Input type="text" name="Tax rate" placeholder="Select"  required />
+                <Input type="text" name="Tax rate" placeholder="Tax rate"  required />
               </FormControl>    
               <FormControl id="cuisine" isRequired>
                 <FormLabel>Cuisine</FormLabel>
@@ -71,22 +71,22 @@ export default function AddItem() {
               </FormControl>    
               <FormControl id="sub cuisine" isRequired>
                 <FormLabel>Sub Cuisine</FormLabel>
-                <Input type="text" name="sub cuisine" placeholder="sub" required />
+                <Input type="text" name="sub cuisine" placeholder="sub Cuisine" required />
               </FormControl>    
       </Flex>
 
       <Flex padding={"15px 15px 0px 15px"} gap={"10px"} flexDirection={{base:"column",md:"row"}}>   
               <FormControl id="weight" isRequired>
                 <FormLabel>Weight in (gm)</FormLabel>
-                <Input type="text" name="weight" placeholder="Select"  required />
+                <Input type="text" name="weight" placeholder="weight"  required />
               </FormControl>    
               <FormControl id="food price" isRequired>
                 <FormLabel>Food Price</FormLabel>
-                <Input type="text" name="food" placeholder="cuisine" required />
+                <Input type="text" name="food" placeholder="Price" required />
               </FormControl>    
               <FormControl id="variants" isRequired>
                 <FormLabel>Variants</FormLabel>
-                <Input type="text" name="variants" placeholder="sub" required />
+                <Input type="text" name="variants" placeholder="Variants" required />
               </FormControl>    
       </Flex>
 

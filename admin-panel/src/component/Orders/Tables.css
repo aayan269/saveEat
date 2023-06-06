@@ -1,9 +1,9 @@
-tbody:before {
+/* tbody:before {
     content:"@";
     display:inline-block;
     line-height:10px;
     text-indent:-99999px;
-}
+} */
 
 #thd{
     text-align: center;
@@ -31,10 +31,7 @@ tbody:before {
    
 
 }
-table{
-   table-layout: auto;
-  
-  }
+
   
 
 .info{

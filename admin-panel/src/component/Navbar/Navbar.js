@@ -23,11 +23,11 @@ function Navbar() {
     <Box w={"120px"} display={{ base: "block", md: "block", lg: "none" }}><h2 className='outlet'>RS1019</h2></Box>
     <Box w={"55vw"}  display={{ base: "none", md: "none", lg: "block" }}>
         <nav>
-        <span onClick={()=>navigate("/")}>Home</span>
-        <span onClick={()=>navigate("/menu")}>Menu</span>
-        <span >Reports</span>
+        <h1 onClick={()=>navigate("/")}>Home</h1>
+        <h1 onClick={()=>navigate("/menu")}>Menu</h1>
+        <h1 >Reports</h1>
         {/* <a href='#'>Settings</a> */}
-        <span ><Menu pl={9} >
+        <h1 ><Menu pl={9} >
   {({ isOpen }) => (
     <>
     {isOpen?
@@ -44,10 +44,10 @@ function Navbar() {
       </MenuList>
     </>
   )}
-</Menu></span>
+</Menu></h1>
 
-        <span onClick={()=>navigate("/discount")}>Discount</span>
-        <span href='#' ><FaUserAlt  /></span>
+        <h1 onClick={()=>navigate("/discount")}>Discount</h1>
+        <h1 href='#' ><FaUserAlt  /></h1>
         </nav>
         
         </Box>

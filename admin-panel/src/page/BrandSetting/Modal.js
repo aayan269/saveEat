@@ -66,7 +66,7 @@ export default function Modals() {
                 <Box flex={2}>
                 <FormControl id="locality" isRequired>
                 <FormLabel>Type of Business</FormLabel>
-                <Input  size={"sm"} borderRadius={10} placeholder='Andheri west' required />
+                <Input  size={"sm"} borderRadius={10} placeholder='co-operative' required />
               </FormControl></Box> 
               <Box flex={1}>  
               <FormControl id="phone" isRequired>
@@ -78,7 +78,7 @@ export default function Modals() {
               <Box flex={1}>
               <FormControl id="locality" isRequired>
                 <FormLabel>FSSAI Licence No.</FormLabel>
-                <Input   size={"sm"} borderRadius={10} placeholder='Andheri west' required />
+                <Input   size={"sm"} borderRadius={10} placeholder='1234567890' required />
               </FormControl>   </Box>
               <Box flex={1}>
               <FormControl id="phone" isRequired>

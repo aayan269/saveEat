@@ -12,6 +12,7 @@ export default function DayRoutine({id,day,count,getId,forDec}) {
   // console.log(count)
   return (
     <>
+    
     <Flex justifyContent={"space-between"} w={"100%"} >
         <h2 id='day'>{day}</h2>
         <Flex justifyContent={"center"} gap={10} alignItems={"center"}>

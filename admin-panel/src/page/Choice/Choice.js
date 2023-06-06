@@ -41,7 +41,7 @@ export default function Choice() {
     
     </Box>
     <Box className="table-container" w={{base:"90vw",lg:"80vw"}} m={"auto"}>
-    <TableContainer borderTop={"none"}>
+    <TableContainer >
       <Table size="sm" variant="striped" colorScheme={"gray"}>
         
         <Thead w={"100%"} className="hgf" display={{base:"none",md:"none",lg:"table"}}>
@@ -413,7 +413,7 @@ console.log(value)}}>
                 <Td id="thd"> <InputGroup >
         <form onSubmit={(e)=>{e.preventDefault();
         console.log(value)}}>
-          <Input size={"xs"} value={value} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Add items"/>
+          <Input size={"xs"} value={value} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Choice ID"/>
           </form>
           <InputRightElement
             children={
@@ -431,7 +431,7 @@ console.log(value)}}>
         <Td id="thd"> <InputGroup >
         <form onSubmit={(e)=>{e.preventDefault();
         console.log(value)}}>
-          <Input size={"xs"} value={value} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Add items"/>
+          <Input size={"xs"} value={value} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Choice Name"/>
           </form>
           <InputRightElement
             children={
@@ -449,7 +449,7 @@ console.log(value)}}>
         <Td id="thd"> <InputGroup >
         <form onSubmit={(e)=>{e.preventDefault();
         console.log(value)}}>
-          <Input size={"xs"} value={value} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Add items"/>
+          <Input size={"xs"} value={value} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Choice Options"/>
           </form>
           <InputRightElement
             children={
@@ -467,7 +467,7 @@ console.log(value)}}>
         <Td id="thd"> <InputGroup >
         <form onSubmit={(e)=>{e.preventDefault();
         console.log(value)}}>
-          <Input size={"xs"} value={value} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Add items"/>
+          <Input size={"xs"} value={value} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="No of Items"/>
           </form>
           <InputRightElement
             children={
@@ -485,7 +485,7 @@ console.log(value)}}>
         <Td id="thd"> <InputGroup >
         <form onSubmit={(e)=>{e.preventDefault();
         console.log(value)}}>
-          <Input size={"xs"} value={value} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Add items"/>
+          <Input size={"xs"} value={value} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Created on"/>
           </form>
           <InputRightElement
             children={
@@ -503,7 +503,7 @@ console.log(value)}}>
         <Td id="thd"> <InputGroup >
         <form onSubmit={(e)=>{e.preventDefault();
         console.log(value)}}>
-          <Input size={"xs"} value={value} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Add items"/>
+          <Input size={"xs"} value={value} onChange={(e)=>setValue(e.target.value)} bgColor={"white"} placeholder="Created By"/>
           </form>
           <InputRightElement
             children={

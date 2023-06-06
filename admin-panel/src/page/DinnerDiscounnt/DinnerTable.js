@@ -68,28 +68,23 @@ export default function DinnerTable({flag}) {
             
           <Tr>
             <Td id="thd">Biryani Rice</Td>
-            <Td id="thd"><ButtonGroup size='sm' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' ><span>5</span></IconButton></ButtonGroup></Td>
+            <Td id="thd"><ButtonGroup size='lg' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  borderRightColor={"#19ABAD"}   ><span style={{marginBottom:"10px"}}>5</span></IconButton> <IconButton aria-label='Add to friends'  borderLeftColor={"#19ABAD"} ><span style={{marginBottom:"10px"}}>5</span></IconButton></ButtonGroup></Td>
            
             
           </Tr>
           <Tr>
             <Td id="thd">Biryani Rice</Td>
-            <Td id="thd"><ButtonGroup size='sm' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' ><span>5</span></IconButton></ButtonGroup></Td>
+            <Td id="thd"><ButtonGroup size='lg' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  borderRightColor={"#19ABAD"}   ><span style={{marginBottom:"10px"}}>5</span></IconButton> <IconButton aria-label='Add to friends'  borderLeftColor={"#19ABAD"} ><span style={{marginBottom:"10px"}}>5</span></IconButton></ButtonGroup></Td>
            
             
           </Tr>
           <Tr>
             <Td id="thd">Biryani Rice</Td>
-            <Td id="thd"><ButtonGroup size='sm' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' ><span>5</span></IconButton></ButtonGroup></Td>
+            <Td id="thd"><ButtonGroup size='lg' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  borderRightColor={"#19ABAD"}   ><span style={{marginBottom:"10px"}}>5</span></IconButton> <IconButton aria-label='Add to friends'  borderLeftColor={"#19ABAD"} ><span style={{marginBottom:"10px"}}>5</span></IconButton></ButtonGroup></Td>
            
             
           </Tr>
-          <Tr>
-            <Td id="thd">Biryani Rice</Td>
-            <Td id="thd"><ButtonGroup size='sm' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' ><span>5</span></IconButton></ButtonGroup></Td>
-           
-            
-          </Tr>
+          
           
 
          
@@ -142,14 +137,40 @@ export default function DinnerTable({flag}) {
             
           <Tr>
             <Td id="thd">Biryani Rice</Td>
-            <Td id="thd"><ButtonGroup size='sm' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' ><span>5</span></IconButton></ButtonGroup></Td>
+            <Td id="thd"><ButtonGroup size='lg' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  borderRightColor={"#19ABAD"}   ><span style={{marginBottom:"10px"}}>5</span></IconButton> <IconButton aria-label='Add to friends'  borderLeftColor={"#19ABAD"} ><span style={{marginBottom:"10px"}}>5</span></IconButton></ButtonGroup></Td>
             <Td id="thd">60</Td>
             <Td id="thd">60</Td>
             
           </Tr>
 
 
-          
+          <Tr>
+            <Td id="thd">Biryani Rice</Td>
+            <Td id="thd"><ButtonGroup size='lg' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  borderRightColor={"#19ABAD"}   ><span style={{marginBottom:"10px"}}>5</span></IconButton> <IconButton aria-label='Add to friends'  borderLeftColor={"#19ABAD"} ><span style={{marginBottom:"10px"}}>5</span></IconButton></ButtonGroup></Td>
+            <Td id="thd">60</Td>
+            <Td id="thd">60</Td>
+            
+          </Tr>
+
+
+          <Tr>
+            <Td id="thd">Biryani Rice</Td>
+            <Td id="thd"><ButtonGroup size='lg' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  borderRightColor={"#19ABAD"}   ><span style={{marginBottom:"10px"}}>5</span></IconButton> <IconButton aria-label='Add to friends'  borderLeftColor={"#19ABAD"} ><span style={{marginBottom:"10px"}}>5</span></IconButton></ButtonGroup></Td>
+            <Td id="thd">60</Td>
+            <Td id="thd">60</Td>
+            
+          </Tr>
+
+
+          <Tr>
+            <Td id="thd">Biryani Rice</Td>
+            <Td id="thd"><ButtonGroup size='lg' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  borderRightColor={"#19ABAD"}   ><span style={{marginBottom:"10px"}}>5</span></IconButton> <IconButton aria-label='Add to friends'  borderLeftColor={"#19ABAD"} ><span style={{marginBottom:"10px"}}>5</span></IconButton></ButtonGroup></Td>
+            <Td id="thd">60</Td>
+            <Td id="thd">60</Td>
+            
+          </Tr>
+
+
           
 
          

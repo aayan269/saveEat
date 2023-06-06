@@ -30,9 +30,8 @@ justify-content: space-around; */
 position: relative;
 /* border: 1px solid red; */
 padding: 19px;
-
 }
-nav span{
+nav h1{
     position: relative;
     z-index: 1;
     display: inline-block;
@@ -41,21 +40,21 @@ nav span{
     /* border: 1px solid red; */
 cursor: pointer;
 }
-span:nth-child(1){
+h1:nth-child(1){
     width: 15%;
 }
-span:nth-child(2){
+h1:nth-child(2){
     width: 18%;
 }
-span:nth-child(3){
+h1:nth-child(3){
     width: 20%;
 }
-span:nth-child(4){
+h1:nth-child(4){
     width: 20%;
 }
-span:nth-child(5){
+h1:nth-child(5){
     width: 18%;
 }
-nav span:nth-child(6){
+nav h1:nth-child(6){
     width: 8%;
 }

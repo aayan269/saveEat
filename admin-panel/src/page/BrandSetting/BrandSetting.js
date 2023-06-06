@@ -92,28 +92,28 @@ return (
              <Flex gap={{base:0,md:5,lg:7}} flexDirection={{base:"column",md:"row"}}>
              <FormControl id="locality" isRequired>
                 <FormLabel>Brand Name</FormLabel>
-                <Input   size={"sm"} borderRadius={10} placeholder='Andheri west' required />
+                <Input   size={"sm"} borderRadius={10} placeholder='Rehanam' required />
               </FormControl>   
               <FormControl id="phone" isRequired>
                 <FormLabel>Ownership Type</FormLabel>
-                <Input size={"sm"} borderRadius={10} placeholder='0123456789' required />
+                <Input size={"sm"} borderRadius={10} placeholder='pvt.ltd' required />
               </FormControl>   
              </Flex> 
              <Flex gap={{base:0,md:5,lg:7}} flexDirection={{base:"column",md:"row"}}>
              <FormControl id="locality" isRequired>
                 <FormLabel>Signing Authority Email ID</FormLabel>
-                <Input   size={"sm"} borderRadius={10} placeholder='Andheri west' required />
+                <Input   size={"sm"} borderRadius={10} placeholder='abc@gmail.com' required />
               </FormControl>   
               <FormControl id="phone" isRequired>
                 <FormLabel>Email ID</FormLabel>
-                <Input   size={"sm"} borderRadius={10} placeholder='0123456789' required />
+                <Input   size={"sm"} borderRadius={10} placeholder='abc@gmail.com' required />
               </FormControl>   
              </Flex>
              <Flex gap={{base:0,md:5,lg:5}} flexDirection={{base:"column",md:"row"}}>
              <Flex flexDirection={{base:"column",md:"Column",lg:"row"}} w={{base:"100%",md:"50%"}} gap={{base:0,md:5,lg:5}} >
               <FormControl id="locality" isRequired>
                 <FormLabel>Type of Business</FormLabel>
-                <Input  size={"sm"} borderRadius={10} placeholder='Andheri west' required />
+                <Input  size={"sm"} borderRadius={10} placeholder='connstruction' required />
               </FormControl>   
               <FormControl id="phone" isRequired>
                 <FormLabel>GSTIN Number</FormLabel>
@@ -122,7 +122,7 @@ return (
               <Flex flexDirection={{base:"column",md:"Column",lg:"row"}} w={{base:"100%",md:"50%"}} gap={{base:0,md:5,lg:5}} >
               <FormControl id="locality" isRequired>
                 <FormLabel>FSSAI Licence No.</FormLabel>
-                <Input   size={"sm"} borderRadius={10} placeholder='Andheri west' required />
+                <Input   size={"sm"} borderRadius={10} placeholder='1234567890' required />
               </FormControl>   
               <FormControl id="phone" isRequired>
                 <FormLabel>Reference No.</FormLabel>
@@ -182,13 +182,13 @@ return (
         <Box flex="2.5">
              <FormControl  id="locality" isRequired>
                 <FormLabel>Name</FormLabel>
-                <Input   size={"sm"}  borderRadius={10} placeholder='Andheri west' required />
+                <Input   size={"sm"}  borderRadius={10} placeholder='Sanam' required />
               </FormControl>   
               </Box>
               <Box flex="2">
               <FormControl id="phone" isRequired>
                 <FormLabel>Email ID</FormLabel>
-                <Input   size={"sm"} borderRadius={10} placeholder='0123456789' required />
+                <Input   size={"sm"} borderRadius={10} placeholder='abc@gmail.com' required />
               </FormControl> 
               </Box>
               <Box flex="1.5">  
@@ -223,11 +223,11 @@ return (
         <Stack id='bdy' >
               <FormControl id="Location" isRequired>
                 <FormLabel>Name</FormLabel>
-                <Input  size={"sm"} borderRadius={10} placeholder='Exact location as on google maps' required />
+                <Input  size={"sm"} borderRadius={10} placeholder='Name' required />
               </FormControl>
              <FormControl id="locality" isRequired>
                 <FormLabel>Email</FormLabel>
-                <Input  size={"sm"} borderRadius={10} placeholder='Andheri west' required />
+                <Input  size={"sm"} borderRadius={10} placeholder='abc@gmail.com' required />
               </FormControl>   
               <FormControl id="phone" isRequired>
                 <FormLabel>Phone No.</FormLabel>

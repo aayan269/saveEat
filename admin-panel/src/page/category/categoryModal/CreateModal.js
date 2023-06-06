@@ -42,16 +42,16 @@ export default function CreateModal({name}) {
            <Stack gap={"5px"}>
            <FormControl id="Menu name" isRequired>
                 <FormLabel>Menu Category Name</FormLabel>
-                <Input type="text" name="MenuName"  placeholder="Menu name"  required />
+                <Input   name="MenuName"  placeholder="Menu name"  required />
               </FormControl> 
               <Flex flexDirection={{base:"column",md:"row",lg:"row"}} gap={10}>
               <FormControl id="Menu name" isRequired>
                 <FormLabel>Choose Menu</FormLabel>
-                <Input type="number" name="MenuName"  placeholder="Menu name"  required />
+                <Input type="number" name="MenuName"  placeholder="Select"  required />
               </FormControl> 
               <FormControl id="Menu name" isRequired>
                 <FormLabel>Menu Category order</FormLabel>
-                <Input type="number" name="MenuName"  placeholder="Menu name"  required />
+                <Input type="number" name="MenuName"  placeholder="order"  required />
               </FormControl> 
               </Flex>
             <FormControl id="Quantity" isRequired>

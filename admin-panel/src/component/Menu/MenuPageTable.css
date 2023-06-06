@@ -1,9 +1,9 @@
-tbody:before {
+/* tbody:before {
     content:"@";
     display:inline-block;
     line-height:10px;
     text-indent:-99999px;
-}
+} */
 /* table tbody,thead{
     overflow: auto;
 } */

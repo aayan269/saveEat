@@ -104,14 +104,13 @@ color: #FFFFFF;
 }
 #btncaption{
     position: absolute;
-width: 93px;
-height: 17.57px;
-/* left: 319px;
-top: 370px; */
-right: -15px;
-/* left: 0px; */
-top: 22px;
+    width: 93px;
+    height: 19px;
+    /* right: -0px; */
+    left: 1px;
+    top: 29px;
 z-index: 1;
+
 /* Alternate Brand Panel Color */
 display: flex;
 justify-content: space-evenly;

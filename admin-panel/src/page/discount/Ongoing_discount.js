@@ -97,51 +97,29 @@ export default function Ongoing_discount() {
         <Tbody display={{base:"none",md:"none",lg:"table"}}>
             <Tr>
                 <Td id="thd"><Input type='text' placeholder='Item name' /></Td>
-                <Td id="thd"><Input type='text' placeholder="Item name"/></Td>
-                <Td id="thd"><Input type='text' placeholder="Item name"/></Td>
-                <Td id="thd"><Input type='text' placeholder="Item name"/></Td>
-                <Td id="thd"><Input type='text' placeholder="Item name"/></Td>
-                <Td id="thd"><Input type='text' placeholder="Item name"/></Td>
-                <Td id="thd"><Input type='text' placeholder="Item name"/></Td>
+                <Td id="thd"><Input type='text' placeholder="Full Price"/></Td>
+                <Td id="thd"><Input type='text' placeholder="Tax Type"/></Td>
+                <Td id="thd"><Input type='text' placeholder="Cuisine"/></Td>
+                <Td id="thd"><Input type='text' placeholder="Weight"/></Td>
+                <Td id="thd"><Input type='text' placeholder="Food Price"/></Td>
+                <Td id="thd"><Input type='text' placeholder="Item Window"/></Td>
                 <Td></Td>
             </Tr>
           <Tr>
             <Td id="thd">Biryani Rice</Td>
-            <Td id="thd">{flag==1?<ButtonGroup size='sm' isAttached variant='outline'><IconButton aria-label='Add to friends' icon={<MinusIcon />} /><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' icon={<AddIcon />} /></ButtonGroup>:
-              (<ButtonGroup size='sm' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' ><span>5</span></IconButton></ButtonGroup>)}</Td>
-            <Td id="thd">2d 23h 40m 60s</Td>
-            <Td id="thd">{flag==1?<Input placeholder="Select Date and Time" size="md" type="datetime-local"/>:"22/12/22 8:00pm"}</Td>
-            <Td id="thd">20</Td>
-            <Td id="thd">450</Td>
-            <Td id="thd">412</Td>
-            <Td id="thd"> <Menu>
-  {flag==1?<Button colorScheme='green' size='sm' color={"white"} onClick={()=>{setFlag(0)}}>save</Button>:<MenuButton  >
-<FaEllipsisV style={{textAlign:"center"}}/>
-    </MenuButton>}
-  <MenuList  >
- 
-    <MenuItem icon={<EditIcon />} onClick={()=>{setFlag(1)}}>
-      Edit Item
-    </MenuItem>
-    <DeleteModal/>
-
-    
-  </MenuList>
-</Menu></Td>
-          </Tr>
-
-
-          <Tr>
-            <Td id="thd">Biryani Rice</Td>
             <Td id="thd">{flag==2?<ButtonGroup size='sm' isAttached variant='outline'><IconButton aria-label='Add to friends' icon={<MinusIcon />} /><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' icon={<AddIcon />} /></ButtonGroup>:
-              (<ButtonGroup size='sm' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' ><span>5</span></IconButton></ButtonGroup>)}</Td>
+              (<ButtonGroup size='lg' isAttached variant='outline' id="btnparent">
+                <Box id="btncaption"><h2 id="cap" style={{marginRight:"13px"}}>On <br/> Discount</h2><h2 id="cap" style={{marginRight:"8px"}}>Left</h2></Box>
+                <IconButton aria-label='Add to friends'  borderRightColor={"#19ABAD"} ><span style={{marginBottom:"10px"}}  >5</span></IconButton>
+                 <IconButton aria-label='Add to friends' borderLeftColor={"#19ABAD"}><span style={{marginBottom:"10px"}}>5</span></IconButton>
+                 </ButtonGroup>)}</Td>
             <Td id="thd">2d 23h 40m 60s</Td>
             <Td id="thd">{flag==2?<Input placeholder="Select Date and Time" size="md" type="datetime-local"/>:"22/12/22 8:00pm"}</Td>
             <Td id="thd">20</Td>
             <Td id="thd">450</Td>
             <Td id="thd">412</Td>
             <Td id="thd"> <Menu>
-            {flag==2?<Button colorScheme='green' size='sm' color={"white"} onClick={()=>{setFlag(0)}}>save</Button>:<MenuButton  >
+  {flag==2?<Button colorScheme='green' size='sm' color={"white"} onClick={()=>{setFlag(0)}}>save</Button>:<MenuButton  >
 <FaEllipsisV style={{textAlign:"center"}}/>
     </MenuButton>}
   <MenuList  >
@@ -155,17 +133,22 @@ export default function Ongoing_discount() {
   </MenuList>
 </Menu></Td>
           </Tr>
+
           <Tr>
             <Td id="thd">Biryani Rice</Td>
             <Td id="thd">{flag==3?<ButtonGroup size='sm' isAttached variant='outline'><IconButton aria-label='Add to friends' icon={<MinusIcon />} /><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' icon={<AddIcon />} /></ButtonGroup>:
-              (<ButtonGroup size='sm' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' ><span>5</span></IconButton></ButtonGroup>)}</Td>
+              (<ButtonGroup size='lg' isAttached variant='outline' id="btnparent">
+                <Box id="btncaption"><h2 id="cap" style={{marginRight:"13px"}}>On <br/> Discount</h2><h2 id="cap" style={{marginRight:"8px"}}>Left</h2></Box>
+                <IconButton aria-label='Add to friends'  borderRightColor={"#19ABAD"} ><span style={{marginBottom:"10px"}}  >5</span></IconButton>
+                 <IconButton aria-label='Add to friends' borderLeftColor={"#19ABAD"}><span style={{marginBottom:"10px"}}>5</span></IconButton>
+                 </ButtonGroup>)}</Td>
             <Td id="thd">2d 23h 40m 60s</Td>
             <Td id="thd">{flag==3?<Input placeholder="Select Date and Time" size="md" type="datetime-local"/>:"22/12/22 8:00pm"}</Td>
             <Td id="thd">20</Td>
             <Td id="thd">450</Td>
             <Td id="thd">412</Td>
             <Td id="thd"> <Menu>
-            {flag==3?<Button colorScheme='green' size='sm' color={"white"} onClick={()=>{setFlag(0)}}>save</Button>:<MenuButton  >
+  {flag==3?<Button colorScheme='green' size='sm' color={"white"} onClick={()=>{setFlag(0)}}>save</Button>:<MenuButton  >
 <FaEllipsisV style={{textAlign:"center"}}/>
     </MenuButton>}
   <MenuList  >
@@ -182,14 +165,18 @@ export default function Ongoing_discount() {
           <Tr>
             <Td id="thd">Biryani Rice</Td>
             <Td id="thd">{flag==4?<ButtonGroup size='sm' isAttached variant='outline'><IconButton aria-label='Add to friends' icon={<MinusIcon />} /><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' icon={<AddIcon />} /></ButtonGroup>:
-              (<ButtonGroup size='sm' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' ><span>5</span></IconButton></ButtonGroup>)}</Td>
+              (<ButtonGroup size='lg' isAttached variant='outline' id="btnparent">
+                <Box id="btncaption"><h2 id="cap" style={{marginRight:"13px"}}>On <br/> Discount</h2><h2 id="cap" style={{marginRight:"8px"}}>Left</h2></Box>
+                <IconButton aria-label='Add to friends'  borderRightColor={"#19ABAD"} ><span style={{marginBottom:"10px"}}  >5</span></IconButton>
+                 <IconButton aria-label='Add to friends' borderLeftColor={"#19ABAD"}><span style={{marginBottom:"10px"}}>5</span></IconButton>
+                 </ButtonGroup>)}</Td>
             <Td id="thd">2d 23h 40m 60s</Td>
             <Td id="thd">{flag==4?<Input placeholder="Select Date and Time" size="md" type="datetime-local"/>:"22/12/22 8:00pm"}</Td>
             <Td id="thd">20</Td>
             <Td id="thd">450</Td>
             <Td id="thd">412</Td>
             <Td id="thd"> <Menu>
-            {flag==4?<Button colorScheme='green' size='sm' color={"white"} onClick={()=>{setFlag(0)}}>save</Button>:<MenuButton  >
+  {flag==4?<Button colorScheme='green' size='sm' color={"white"} onClick={()=>{setFlag(0)}}>save</Button>:<MenuButton  >
 <FaEllipsisV style={{textAlign:"center"}}/>
     </MenuButton>}
   <MenuList  >
@@ -203,32 +190,6 @@ export default function Ongoing_discount() {
   </MenuList>
 </Menu></Td>
           </Tr>
-          <Tr>
-            <Td id="thd">Biryani Rice</Td>
-            <Td id="thd">{flag==5?<ButtonGroup size='sm' isAttached variant='outline'><IconButton aria-label='Add to friends' icon={<MinusIcon />} /><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' icon={<AddIcon />} /></ButtonGroup>:
-              (<ButtonGroup size='sm' isAttached variant='outline' id="btnparent"><Box id="btncaption"><h2 id="cap">On <br/> Discount</h2><h2 id="cap">Left</h2></Box><IconButton aria-label='Add to friends'  ><span>5</span></IconButton> <IconButton aria-label='Add to friends' ><span>5</span></IconButton></ButtonGroup>)}</Td>
-            <Td id="thd">2d 23h 40m 60s</Td>
-            <Td id="thd">{flag==5?<Input placeholder="Select Date and Time" size="md" type="datetime-local"/>:"22/12/22 8:00pm"}</Td>
-            <Td id="thd">20</Td>
-            <Td id="thd">450</Td>
-            <Td id="thd">412</Td>
-            <Td id="thd"> <Menu>
-            {flag==5?<Button colorScheme='green' size='sm' color={"white"} onClick={()=>{setFlag(0)}}>save</Button>:<MenuButton  >
-<FaEllipsisV style={{textAlign:"center"}}/>
-    </MenuButton>}
-  <MenuList  >
- 
-    <MenuItem icon={<EditIcon />} onClick={()=>{setFlag(5)}}>
-      Edit Item
-    </MenuItem>
-    {/* <MenuItem icon={<DeleteIcon />} >
-      Delete Item
-    </MenuItem> */}
-    <DeleteModal/>
-  </MenuList>
-</Menu></Td>
-          </Tr>
-          
 
          
           
