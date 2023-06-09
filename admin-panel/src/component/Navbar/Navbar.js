@@ -6,7 +6,7 @@ import { Box, Flex, Icon, Image,Menu,
   MenuGroup,
   MenuOptionGroup,
   MenuDivider,Button, Divider } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import vector from "../../Vector.png"
 import "./Navbar.css"
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -14,13 +14,19 @@ import { FaUserAlt } from 'react-icons/fa';
 import HamDrawer from './Drawer';
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function Navbar() {
+  const {data}=useSelector(store=>store.auth)
   const navigate=useNavigate()
+
+ 
+
   return (
+    <>
     <Flex  w={"100vw"} h={"62px"} bgColor={"#19ABAD"} justifyContent={"space-between"}>
     <Box w={"120px"} ml={"3vw"}><Image p={"22px"} w={"100%"} h={"100%"} src={vector} alt='saveEat' /></Box>
-    <Box w={"120px"} display={{ base: "block", md: "block", lg: "none" }}><h2 className='outlet'>RS1019</h2></Box>
+    <Box w={"120px"} display={{ base: "block", md: "block", lg: "none" }}><h2 className='outlet'>{data?data.empNumber:"Rs1019"}</h2></Box>
     <Box w={"55vw"}  display={{ base: "none", md: "none", lg: "block" }}>
         <nav>
         <h1 onClick={()=>navigate("/")}>Home</h1>
@@ -51,9 +57,13 @@ function Navbar() {
         </nav>
         
         </Box>
-    <Box w={"120px"} mr={"1vw"} display={{ base: "none", md: "none", lg: "block" }}><h2 className='outlet'>RS1019</h2></Box>
+    <Box w={"120px"} mr={"1vw"} display={{ base: "none", md: "none", lg: "block" }}><h2 className='outlet'>{data.empNumber}</h2></Box>
     <Box display={{ base: "block", md: "block", lg: "none" }}><HamDrawer/></Box>
     </Flex>
+
+    <br/>    <br/>
+
+    </>
   )
 }
 

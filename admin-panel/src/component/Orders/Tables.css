@@ -71,6 +71,11 @@ color: #000000;
     min-width: 100%;
   }
   
+  table td:hover {
+    overflow: visible;
+    white-space: normal;
+    width: auto;
+  }
   .table-container td,
   .table-container th {
     white-space: nowrap;

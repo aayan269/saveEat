@@ -22,11 +22,16 @@ import { DeleteIcon, EditIcon } from '@chakra-ui/icons'
 import { FaEllipsisV } from 'react-icons/fa';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import BulkUpload from '../bulk/Bulk';
+import Navbar from '../Navbar/Navbar';
+import PreNav from '../Pre-nav/PreNav';
 
 export default function Editmenu() {
   const navigate=useNavigate()
   return (
-    <><Box w={{base:"90vw",lg:"80vw"}}  m={"auto"}  display={"flex"} justifyContent={"flex-end"} alignItems={"center"}  h={"70px"}>
+    <>
+     <PreNav/>
+      <Navbar/>
+    <Box w={{base:"90vw",lg:"80vw"}}  m={"auto"}  display={"flex"} justifyContent={"flex-end"} alignItems={"center"}  h={"70px"}>
 
     <Box  display={"flex"} gap={"5"} >
     {/* <Button colorScheme='green' size='md' className='btt'>Bulk Upload</Button> */}

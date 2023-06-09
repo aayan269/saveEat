@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Table,
   Thead,
@@ -12,7 +12,10 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import "./Tables.css";
-export default function Tables() {
+import { useDispatch, useSelector } from "react-redux";
+import { GETDATA } from "../../redux/order/order.action";
+export default function Tables({data}) {
+  
   return (
    <Box className="table-container">
     <TableContainer borderTop={"none"}>
@@ -107,89 +110,24 @@ export default function Tables() {
 
        </Tbody>
         <Tbody display={{base:"none",md:"none",lg:"table"}}>
-          <Tr>
-            <Td id="thd">Pizza</Td>
-            <Td id="thd">Thin Crust,Fresh Pan, Olives and Onion</Td>
-            <Td id="thd">240.00</Td>
-            <Td id="thd">20%</Td>
-            <Td id="thd">2</Td>
-            <Td id="thd">200.00</Td>
-            <Td id="thd">9</Td>
-            <Td id="thd">30</Td>
-            <Td id="thd">200.00</Td>
-          </Tr>
 
-          <Tr>
-            <Td id="thd">Pizza</Td>
+          {data.orderData?.map((el)=>(
+            <Tr key={el._id}>
+            <Td id="thd">{el.productData.foodName}</Td>
             <Td id="thd">Thin Crust,Fresh Pan, Olives and Onion</Td>
-            <Td id="thd">240.00</Td>
-            <Td id="thd">20%</Td>
-            <Td id="thd">2</Td>
-            <Td id="thd">200.00</Td>
-            <Td id="thd">9</Td>
-            <Td id="thd">30</Td>
-            <Td id="thd">200.00</Td>
+            <Td id="thd">{el.productData.price}</Td>
+            <Td id="thd">{Math.floor(((el.productData.price-el.productAmount)/el.productData.price)*100)}%</Td>
+            <Td id="thd">{el.quantity}</Td>
+            <Td id="thd">{el.productAmount}</Td>
+            <Td id="thd">{~~el.tax}</Td>
+            <Td id="thd">{el.amountWithQuantuty}</Td>
+            <Td id="thd">{~~el.withTax}</Td>
           </Tr>
+          ))}
+          
 
-          <Tr>
-            <Td id="thd">Pizza</Td>
-            <Td id="thd">Thin Crust,Fresh Pan, Olives and Onion</Td>
-            <Td id="thd">240.00</Td>
-            <Td id="thd">20%</Td>
-            <Td id="thd">2</Td>
-            <Td id="thd">200.00</Td>
-            <Td id="thd">9</Td>
-            <Td id="thd">30</Td>
-            <Td id="thd">200.00</Td>
-          </Tr>
-
-          <Tr>
-            <Td id="thd">Pizza</Td>
-            <Td id="thd">Thin Crust,Fresh Pan, Olives and Onion</Td>
-            <Td id="thd">240.00</Td>
-            <Td id="thd">20%</Td>
-            <Td id="thd">2</Td>
-            <Td id="thd">200.00</Td>
-            <Td id="thd">9</Td>
-            <Td id="thd">30</Td>
-            <Td id="thd">200.00</Td>
-          </Tr>
-
-          <Tr>
-            <Td id="thd">Pizza</Td>
-            <Td id="thd">Thin Crust,Fresh Pan, Olives and Onion</Td>
-            <Td id="thd">240.00</Td>
-            <Td id="thd">20%</Td>
-            <Td id="thd">2</Td>
-            <Td id="thd">200.00</Td>
-            <Td id="thd">9</Td>
-            <Td id="thd">30</Td>
-            <Td id="thd">200.00</Td>
-          </Tr>
-
-          <Tr>
-            <Td id="thd">Pizza</Td>
-            <Td id="thd">Thin Crust,Fresh Pan, Olives and Onion</Td>
-            <Td id="thd">240.00</Td>
-            <Td id="thd">20%</Td>
-            <Td id="thd">2</Td>
-            <Td id="thd">200.00</Td>
-            <Td id="thd">9</Td>
-            <Td id="thd">30</Td>
-            <Td id="thd">200.00</Td>
-          </Tr>
-
-          <Tr>
-            <Td id="thd">Pizza</Td>
-            <Td id="thd">Thin Crust,Fresh Pan, Olives and Onion</Td>
-            <Td id="thd">240.00</Td>
-            <Td id="thd">20%</Td>
-            <Td id="thd">2</Td>
-            <Td id="thd">200.00</Td>
-            <Td id="thd">9</Td>
-            <Td id="thd">30</Td>
-            <Td id="thd">200.00</Td>
-          </Tr>
+        
+        
         </Tbody>
       </Table>
     </TableContainer></Box>

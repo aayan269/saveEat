@@ -22,9 +22,13 @@ import { FaEllipsisV } from 'react-icons/fa';
 import MenuTables from './MenuPageTable';
 import AddMenuModal from './AddMenuModal';
 import { Link } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
+import PreNav from '../Pre-nav/PreNav';
 export default function MenuPage() {
   return (
    <>
+    <PreNav/>
+      <Navbar/>
 
 <Box w={{base:"90vw",lg:"80vw"}}  m={"auto"}  display={"flex"} justifyContent={"flex-end"} alignItems={"center"}  h={"70px"}>
 

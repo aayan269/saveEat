@@ -3,9 +3,13 @@ import "./Add_newItem.css"
 import { Box, Button, Checkbox, Flex, FormControl, FormLabel, Input, InputGroup, InputRightAddon, Stack } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { CloseIcon } from '@chakra-ui/icons'
+import PreNav from '../Pre-nav/PreNav'
+import Navbar from '../Navbar/Navbar'
 export default function AddItem() {
   return (
     <>
+     <PreNav/>
+      <Navbar/>
     <Box w={{base:"90vw",lg:"80vw"}}  m={"auto"}  display={"flex"} justifyContent={"space-between"} alignItems={"center"}  h={"70px"}>
 
     <h2  className='btt'>Add New Item</h2>
