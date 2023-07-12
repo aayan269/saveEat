@@ -1,4 +1,4 @@
-import { ORDER } from "./order.types"
+import { ACCEPT_ORDER, ORDER, READYTOPICK_ORDER, REJECT_ORDER } from "./order.types"
 
 
 const initial={
@@ -13,7 +13,21 @@ const initial={
                 ...state,message:payload.message,data:payload.data
             }
         }
-       
+        case ACCEPT_ORDER:{
+            return{
+                ...state,message:payload.message
+            }
+        }
+        case REJECT_ORDER:{
+            return{
+                ...state,message:payload.message
+            }
+        }
+       case READYTOPICK_ORDER:{
+        return{
+            ...state,message:payload.message
+        }
+       }
        
         default :return state
 

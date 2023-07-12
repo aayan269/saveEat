@@ -29,8 +29,7 @@ function App() {
         <Route path="/home" element={<Private><Orders/></Private>} />
         <Route path="/signup" element={<SignUp_page/>} />
         <Route path="/menu" element={<Private><MenuPage/></Private>} />
-        <Route path="/editmenu" element={<Private><Editmenu/></Private>} />
-        <Route path="/updateItem" element={<Private><UpdateItem/></Private>} />
+        <Route path="/editmenu/:id" element={<Private><Editmenu/></Private>} />
         <Route path="/addItem" element={<Private><AddItem/></Private>} />
         <Route path="/discount" element={<Private><Ongoing_discount/></Private>} />
         <Route path="/category" element={<Private><Category/></Private>} />

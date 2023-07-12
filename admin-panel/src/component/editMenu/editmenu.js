@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./editmenu.css"
 import {
   Table,
@@ -20,13 +20,38 @@ import {
 } from "@chakra-ui/react";
 import { DeleteIcon, EditIcon } from '@chakra-ui/icons'
 import { FaEllipsisV } from 'react-icons/fa';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
 import BulkUpload from '../bulk/Bulk';
 import Navbar from '../Navbar/Navbar';
 import PreNav from '../Pre-nav/PreNav';
+import axios from 'axios';
+import UpdateItem from '../updateItem/UpdateItem';
+import AddItem from '../Add_new_Item/Add_newItem';
 
 export default function Editmenu() {
   const navigate=useNavigate()
+  const [list,setList]=useState([])
+  const params=useParams()
+
+  const GET_LIST=async()=>{
+    let brandId=JSON.parse(localStorage.getItem('data'))
+    let creds={
+        "menuId": params.id,
+        "brandId": brandId._id
+      }
+    try{
+        let response=await axios.post('https://support.saveeat.in:3035/api/v1/user/itemList',creds)
+        console.log(response.data)
+         setList(response.data.data)
+        // dispatch({type:MENU_ITEMLIST,payload:response.data})
+    }catch(e){
+        console.log(e)
+    }
+  }
+  useEffect(()=>{
+// dispatch(GET_ITEM_LIST(data._id))
+GET_LIST()
+  },[])
   return (
     <>
      <PreNav/>
@@ -36,8 +61,8 @@ export default function Editmenu() {
     <Box  display={"flex"} gap={"5"} >
     {/* <Button colorScheme='green' size='md' className='btt'>Bulk Upload</Button> */}
     <BulkUpload/>
-  <Link to="/addItem">   <Button colorScheme='green' size='md'  className='btt'>Add Individual Product</Button></Link>
-    
+  {/* <Link to="/addItem">   <Button colorScheme='green' size='md'  className='btt'>Add Individual Product</Button></Link> */}
+    <AddItem data={list}/>
     </Box>
     
     </Box>
@@ -60,323 +85,62 @@ export default function Editmenu() {
             <Th id="thds"><FaEllipsisV style={{textAlign:"center",width:"100%"}} color='white'/></Th>
           </Tr>
         </Thead>
-        <Tbody display={{base:"block",md:"block",lg:"none"}}>
-       
-          <Box  width={{base:"90vw",md:"86vw"}} padding={2} m={"auto"} height={"200px"} overflowY={"scroll"}>
-          <Box border={"1px solid"}  w={{base:"80vw",md:"60vw"}}  m={"auto"} >
-
-           <Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd"><label htmlFor="fileInput"> Image</label><input
-              id="fileInput"
-              type="file"
-              style={{ display: "none" }}
-              className="registerPPInput"/></Td></Tr></Flex>
-           <Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-           <Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-           <Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-           <Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-           <Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-           <Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-           <Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd"><FaEllipsisV style={{textAlign:"ecnter",width:"100%"}} /></Td></Tr></Flex>
-
+        <Tbody >
           
-          </Box>
-          <Box border={"1px solid"}  w={{base:"80vw",md:"60vw"}}  m={"auto"} >
-
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd"><label htmlFor="fileInput"> Image</label><input
-   id="fileInput"
-   type="file"
-   style={{ display: "none" }}
-   className="registerPPInput"/></Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd"><FaEllipsisV style={{textAlign:"ecnter",width:"100%"}} /></Td></Tr></Flex>
-
-
-</Box>
-<Box border={"1px solid"}  w={{base:"80vw",md:"60vw"}}  m={"auto"} >
-
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd"><label htmlFor="fileInput"> Image</label><input
-   id="fileInput"
-   type="file"
-   style={{ display: "none" }}
-   className="registerPPInput"/></Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd"><FaEllipsisV style={{textAlign:"ecnter",width:"100%"}} /></Td></Tr></Flex>
-
-
-</Box>
-<Box border={"1px solid"}  w={{base:"80vw",md:"60vw"}}  m={"auto"} >
-
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd"><label htmlFor="fileInput"> Image</label><input
-   id="fileInput"
-   type="file"
-   style={{ display: "none" }}
-   className="registerPPInput"/></Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd"><FaEllipsisV style={{textAlign:"ecnter",width:"100%"}} /></Td></Tr></Flex>
-
-
-</Box>
-<Box border={"1px solid"}  w={{base:"80vw",md:"60vw"}}  m={"auto"} >
-
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd"><label htmlFor="fileInput"> Image</label><input
-   id="fileInput"
-   type="file"
-   style={{ display: "none" }}
-   className="registerPPInput"/></Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd">Pizza</Td></Tr></Flex>
-<Flex  justifyContent={"space-between"}  p={2}><Tr><Th id="thds">name</Th><Td id="thd"><FaEllipsisV style={{textAlign:"ecnter",width:"100%"}} /></Td></Tr></Flex>
-
-
-</Box>
+          {list?.map((el)=>(
+            <Tr key={el._id} display={{base:"none",md:"none",lg:"table"}}>
+            <Td id="thd">{el.foodName}</Td>
+            {el.foodImage?<Td id="thd"><Checkbox colorScheme='green' defaultChecked></Checkbox></Td>:<Td id="thd"> <label htmlFor="fileInput"> Upload</label><input
+              id="fileInput"
+              type="file"
+              style={{ display: "none" }}
+              className="registerPPInput"/></Td>}
+            <Td id="thd">{el.foodType}</Td>
+            <Td id="thd">MRP</Td>
+            <Td id="thd">20%</Td>
+            <Td id="thd">{el.cuisine}</Td>
+            <Td id="thd">{el.subCategory}</Td>
+            <Td id="thd">9</Td>
+            <Td id="thd">{el.price}</Td>
+            <Td id="thd">All Day</Td>
+            <Td id="thd"> <Menu>
+  <MenuButton  >
+<FaEllipsisV style={{textAlign:"center"}}/>
+    </MenuButton>
+  <MenuList  >
+  {/* <Link to="/updateItem"> */}
+    {/* <MenuItem icon={<EditIcon />} > */}
+      <UpdateItem/>
+    {/* </MenuItem> */}
+    {/* </Link> */}
+    <MenuItem icon={<DeleteIcon />} >
+      Delete Item
+    </MenuItem>
+    
+  </MenuList>
+</Menu></Td>
+          </Tr>
+          ))}
           
-        
-          </Box>
+          
+ <Box display={{base:"block",md:"block",lg:"none"}} width={{base:"90vw",md:"86vw"}} padding={2} m={"auto"} height={"200px"} overflowY={"scroll"}>
+ {list?.map((el)=>(
+   <Box border={"1px solid"}  w={{base:"80vw",md:"60vw"}}  m={"auto"} key={el._id}>
+  <Tr  p={2} > <Th id="thds">Item Name</Th>            <Td id="thd">{el.foodName}</Td></Tr>
+  <Tr  p={2} > <Th id="thds">Image</Th>           {el.foodImage?<Td id="thd"><Checkbox colorScheme='green' defaultChecked></Checkbox></Td>:<Td id="thd"> <label htmlFor="fileInput"> Upload</label><input id="fileInput" type="file" style={{ display: "none" }} className="registerPPInput"/></Td>}</Tr>
+  <Tr   p={2}> <Th id="thds">Food Type</Th>            <Td id="thd">{el.foodType}</Td></Tr>
+  <Tr   p={2}> <Th id="thds">Tax Type</Th>            <Td id="thd">MRP</Td></Tr>
+  <Tr   p={2}> <Th id="thds">Tax Rate</Th>            <Td id="thd">20%</Td></Tr>
+  <Tr   p={2}> <Th id="thds">Cuisine</Th>            <Td id="thd">{el.cuisine}</Td></Tr>
+  <Tr   p={2}> <Th id="thds">Sub Cuisine</Th>            <Td id="thd">{el.subCategory}</Td></Tr>
+  <Tr   p={2}> <Th id="thds">Weight in (g)</Th>            <Td id="thd">9</Td></Tr>
+  <Tr   p={2}> <Th id="thds">Food Price</Th>            <Td id="thd">{el.price}</Td></Tr>
+  <Tr   p={2}> <Th id="thds">Item Window</Th>            <Td id="thd">9 am to 11 am</Td></Tr>
+ </Box>
+ ))}
 
-       </Tbody>
-        <Tbody display={{base:"none",md:"none",lg:"table"}}>
-          <Tr>
-            <Td id="thd">Biryani Rice</Td>
-            <Td id="thd"><label htmlFor="fileInput"> Image</label><input
-              id="fileInput"
-              type="file"
-              style={{ display: "none" }}
-              className="registerPPInput"/></Td>
-            <Td id="thd">Veg</Td>
-            <Td id="thd">MRP</Td>
-            <Td id="thd">5%</Td>
-            <Td id="thd">Rice</Td>
-            <Td id="thd">Rice</Td>
-            <Td id="thd">124</Td>
-            <Td id="thd">450.00</Td>
-            <Td id="thd">All Day</Td>
-            <Td id="thd"> <Menu>
-  <MenuButton  >
-<FaEllipsisV style={{textAlign:"center"}}/>
-    </MenuButton>
-  <MenuList  >
-  <Link to="/updateItem">
-    <MenuItem icon={<EditIcon />} >
-      Edit Item
-    </MenuItem></Link>
-    <MenuItem icon={<DeleteIcon />} >
-      Delete Item
-    </MenuItem>
-    
-  </MenuList>
-</Menu></Td>
-          </Tr>
-
-          <Tr>
-            <Td id="thd">Biryani Rice</Td>
-            <Td id="thd"><label htmlFor="fileInput"> Image</label><input
-              id="fileInput"
-              type="file"
-              style={{ display: "none" }}
-              className="registerPPInput"/></Td>
-            <Td id="thd">Veg</Td>
-            <Td id="thd">MRP</Td>
-            <Td id="thd">5%</Td>
-            <Td id="thd">Rice</Td>
-            <Td id="thd">Rice</Td>
-            <Td id="thd">124</Td>
-            <Td id="thd">450.00</Td>
-            <Td id="thd">All Day</Td>
-            <Td id="thd"> <Menu>
-  <MenuButton  >
-<FaEllipsisV style={{textAlign:"center"}}/>
-    </MenuButton>
-  <MenuList  >
-  <Link to="/updateItem">
-    <MenuItem icon={<EditIcon />} >
-      Edit Item
-    </MenuItem></Link>
-    <MenuItem icon={<DeleteIcon />} >
-      Delete Item
-    </MenuItem>
-    
-  </MenuList>
-</Menu></Td>
-          </Tr>
-          <Tr>
-            <Td id="thd">Biryani Rice</Td>
-            <Td id="thd"><label htmlFor="fileInput"> Image</label><input
-              id="fileInput"
-              type="file"
-              style={{ display: "none" }}
-              className="registerPPInput"/></Td>
-            <Td id="thd">Veg</Td>
-            <Td id="thd">MRP</Td>
-            <Td id="thd">5%</Td>
-            <Td id="thd">Rice</Td>
-            <Td id="thd">Rice</Td>
-            <Td id="thd">124</Td>
-            <Td id="thd">450.00</Td>
-            <Td id="thd">All Day</Td>
-            <Td id="thd"> <Menu>
-  <MenuButton  >
-<FaEllipsisV style={{textAlign:"center"}}/>
-    </MenuButton>
-  <MenuList  >
-  <Link to="/updateItem">
-    <MenuItem icon={<EditIcon />} >
-      Edit Item
-    </MenuItem></Link>
-    <MenuItem icon={<DeleteIcon />} >
-      Delete Item
-    </MenuItem>
-    
-  </MenuList>
-</Menu></Td>
-          </Tr>
-
-          <Tr>
-            <Td id="thd">Biryani Rice</Td>
-            <Td id="thd"><label htmlFor="fileInput"> Image</label><input
-              id="fileInput"
-              type="file"
-              style={{ display: "none" }}
-              className="registerPPInput"/></Td>
-            <Td id="thd">Veg</Td>
-            <Td id="thd">MRP</Td>
-            <Td id="thd">5%</Td>
-            <Td id="thd">Rice</Td>
-            <Td id="thd">Rice</Td>
-            <Td id="thd">124</Td>
-            <Td id="thd">450.00</Td>
-            <Td id="thd">All Day</Td>
-            <Td id="thd"> <Menu>
-  <MenuButton  >
-<FaEllipsisV style={{textAlign:"center"}}/>
-    </MenuButton>
-  <MenuList  >
-  <Link to="/updateItem">
-    <MenuItem icon={<EditIcon />} >
-      Edit Item
-    </MenuItem></Link>
-    <MenuItem icon={<DeleteIcon />} >
-      Delete Item
-    </MenuItem>
-    
-  </MenuList>
-</Menu></Td>
-          </Tr>
-
-          <Tr>
-            <Td id="thd">Biryani Rice</Td>
-            <Td id="thd"><label htmlFor="fileInput"> Image</label><input
-              id="fileInput"
-              type="file"
-              style={{ display: "none" }}
-              className="registerPPInput"/></Td>
-            <Td id="thd">Veg</Td>
-            <Td id="thd">MRP</Td>
-            <Td id="thd">5%</Td>
-            <Td id="thd">Rice</Td>
-            <Td id="thd">Rice</Td>
-            <Td id="thd">124</Td>
-            <Td id="thd">450.00</Td>
-            <Td id="thd">All Day</Td>
-            <Td id="thd"> <Menu>
-  <MenuButton  >
-<FaEllipsisV style={{textAlign:"center"}}/>
-    </MenuButton>
-  <MenuList  >
-  <Link to="/updateItem">
-    <MenuItem icon={<EditIcon />} >
-      Edit Item
-    </MenuItem></Link>
-    <MenuItem icon={<DeleteIcon />} >
-      Delete Item
-    </MenuItem>
-    
-  </MenuList>
-</Menu></Td>
-          </Tr>
-
-          <Tr>
-            <Td id="thd">Biryani Rice</Td>
-            <Td id="thd"><label htmlFor="fileInput"> Image</label><input
-              id="fileInput"
-              type="file"
-              style={{ display: "none" }}
-              className="registerPPInput"/></Td>
-            <Td id="thd">Veg</Td>
-            <Td id="thd">MRP</Td>
-            <Td id="thd">5%</Td>
-            <Td id="thd">Rice</Td>
-            <Td id="thd">Rice</Td>
-            <Td id="thd">124</Td>
-            <Td id="thd">450.00</Td>
-            <Td id="thd">All Day</Td>
-            <Td id="thd"> <Menu>
-  <MenuButton  >
-<FaEllipsisV style={{textAlign:"center"}}/>
-    </MenuButton>
-  <MenuList  >
-  <Link to="/updateItem">
-    <MenuItem icon={<EditIcon />} >
-      Edit Item
-    </MenuItem></Link>
-    <MenuItem icon={<DeleteIcon />} >
-      Delete Item
-    </MenuItem>
-    
-  </MenuList>
-</Menu></Td>
-          </Tr>
-
-          <Tr>
-            <Td id="thd">Biryani Rice</Td>
-            <Td id="thd"><label htmlFor="fileInput"> Image</label><input
-              id="fileInput"
-              type="file"
-              style={{ display: "none" }}
-              className="registerPPInput"/></Td>
-            <Td id="thd">Veg</Td>
-            <Td id="thd">MRP</Td>
-            <Td id="thd">5%</Td>
-            <Td id="thd">Rice</Td>
-            <Td id="thd">Rice</Td>
-            <Td id="thd">124</Td>
-            <Td id="thd">450.00</Td>
-            <Td id="thd">All Day</Td>
-            <Td id="thd"> <Menu>
-  <MenuButton  >
-<FaEllipsisV style={{textAlign:"center"}}/>
-    </MenuButton>
-  <MenuList  >
-  <Link to="/updateItem">
-    <MenuItem icon={<EditIcon />} >
-      Edit Item
-    </MenuItem></Link>
-    <MenuItem icon={<DeleteIcon />} >
-      Delete Item
-    </MenuItem>
-    
-  </MenuList>
-</Menu></Td>
-          </Tr>
-         
+ </Box>
+      
           
         </Tbody>
       </Table>

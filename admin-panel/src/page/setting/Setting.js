@@ -4,6 +4,8 @@ import "./Setting.css"
 import DayRoutine from './DayRoutine'
 import { FaEllipsisV, FaMinusCircle, FaPlusCircle } from 'react-icons/fa'
 import HolidayModal from './HolidayModal'
+import Navbar from '../../component/Navbar/Navbar'
+import PreNav from '../../component/Pre-nav/PreNav'
 
 let data=[{id:1,day:"Monday",count:0},{id:2,day:"Tuesday",count:0},{id:3,day:"Wednesday",count:0},{id:4,day:"Thursday",count:0},{id:5,day:"Friday",count:0},
 {id:6,day:"Saturday",count:0},{id:7,day:"Sunday",count:0}]
@@ -24,7 +26,8 @@ export default function Setting() {
 
   return (
     <>
-    
+     <PreNav/>
+      <Navbar/>
     <Box w={{base:"90vw",lg:"70vw"}}  m={"auto"}  display={"flex"} justifyContent={"space-between"} alignItems={"center"}  h={"70px"}>
     
     <Box><h2 id='heading'>Standard Opening Hours</h2></Box>

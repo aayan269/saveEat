@@ -18,26 +18,23 @@ import { GETDATA } from '../../redux/order/order.action'
 
 export default function Orders() {
   const dispatch = useDispatch()
-const {data}=useSelector(store=>store.order)
-console.log(data)
+const {data,message}=useSelector(store=>store.order)
+console.log(data,message)
   useEffect(()=>{
 dispatch(GETDATA())
-  },[])
+  },[message])
   return (
     <>
       <PreNav/>
       <Navbar/>
 
 {data.orderList?.map((el)=>(
- <Accordion  w={{base:"90vw",lg:"80vw"}} m={"auto"} allowToggle>
+ <Accordion paddingBottom={5} key={el._id}  w={{base:"90vw",lg:"80vw"}} m={"auto"} allowToggle>
 
- <AccordionItem bgColor={"#FF8181"} borderRadius={7}>
+ <AccordionItem bgColor={el.status=="Accepted"?"#95CECF":el.status=="Order Ready for pickup"?"#96D780":"#FF8181"} borderRadius={7}>
    <h2>
      <AccordionButton>
-       {/* <Box flex='1' color="white"  >
-         Section 1 title
-       </Box>
-     <Box>hjgj</Box> */}
+      
      <Stack w={"100%"}>
      <Flex w={"99%"} margin={"auto"} justifyContent={"space-between"}>
        <h2 id='order_No'>{el.orderNumber}</h2>
@@ -71,7 +68,7 @@ dispatch(GETDATA())
 
 
 
-   <AccordionPanel padding={"10px"} style={{boxShadow: "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px"}} borderRadius={"0 0 20px 20px"} bgColor={"white"}>
+   <AccordionPanel padding={"10px"}  borderRadius={"0 0 20px 20px"} bgColor={"#FFFFFF"}>
    <Tables data={el}/>
    </AccordionPanel>
  </AccordionItem>
@@ -79,6 +76,7 @@ dispatch(GETDATA())
 
  
 </Accordion>
+
 ))}
    
 

@@ -2,9 +2,9 @@ import { Input } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import "./BrandSetting.css"
 import {MdClose} from 'react-icons/md'
-export default function TagInput({type}) {
+export default function TagInput({type,tg}) {
     const [text,setText]=useState("")
-    const [tags, setTags] = useState([ "label"]);
+    const [tags, setTags] = useState([ tg?tg:"label"]);
 
    
 
@@ -40,7 +40,7 @@ export default function TagInput({type}) {
     <div className="tag-container">
     {tags.map((tag, index) => {
       return (
-        <div key={index} className="tag">
+        <div key={index} className="tag" style={{maxWidth:"100%",overflow:"hidden"}}>
           {tag} <span onClick={() => removeTag(tag)}><MdClose/></span>
         </div>
       );
